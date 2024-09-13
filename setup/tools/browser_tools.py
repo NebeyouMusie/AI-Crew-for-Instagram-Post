@@ -9,6 +9,8 @@ sys.path.append(str(parent_dir))
 import os
 import json
 
+from textwrap import dedent
+
 import requests
 from crewai import Agent, Task
 from langchain.tools import tool
@@ -36,18 +38,27 @@ class BrowserTools:
         for chunk in content:
             agent = Agent(
                 role='Principal Researcher',
-                goal=
-                'Do amazing researches and summaries based on the content you are working with',
-                backstory=
-                "You're a Principal Researcher at a big company and you need to do a research about a given topic.",
+                goal='Do amazing research and summaries based on the content you are working with',
+                backstory="You're a Principal Researcher at a big company and you need to do research about a given topic.",
                 llm=groq_llm(),
-                allow_delegation=False)
+                allow_delegation=False
+            )
+            
             task = Task(
                 agent=agent,
-                description=
-                f'Analyze and make a LONG summary the content bellow, make sure to include the ALL relevant information in the summary, return only the summary nothing else.\n\nCONTENT\n----------\n{chunk}'
+                description=(
+                    f'Analyze and make a LONG summary of the content below. '
+                    f'Make sure to include ALL relevant information in the summary. '
+                    f'Return only the summary, nothing else.\n\nCONTENT\n----------\n{chunk}'
+                ),
+                expected_output=dedent("""\
+                    A comprehensive, detailed summary of the content, 
+                    including all key points and relevant information, 
+                    ensuring that no significant detail is left out.
+                """)
             )
-            summary = task.execute()
+            
+            summary = task.execute_sync()
             summaries.append(summary)
             content = "\n\n".join(summaries)
         return f'\nScrapped Content: {content}\n'
