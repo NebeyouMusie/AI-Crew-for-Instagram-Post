@@ -9,3 +9,6 @@ def load_config():
 # Function to retrieve GROQ API KEY
 def get_groq_api_key():
     return os.getenv('GROQ_API_KEY')
+
+def get_browserless_api_key():
+    return os.getenv('BROWSERLESS_API_KEY')
