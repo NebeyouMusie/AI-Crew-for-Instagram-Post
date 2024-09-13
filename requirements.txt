@@ -1,0 +1,8 @@
+langchain
+langchain_groq
+langchain_community
+python-dotenv
+requests
+unstructured
+crewai
+crewai[tools]
