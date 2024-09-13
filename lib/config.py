@@ -12,3 +12,6 @@ def get_groq_api_key():
 
 def get_browserless_api_key():
     return os.getenv('BROWSERLESS_API_KEY')
+
+def get_serperdev_api_key():
+    return os.getenv('SERPER_API_KEY')
