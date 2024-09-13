@@ -12,7 +12,7 @@ import json
 from textwrap import dedent
 
 import requests
-from crewai import Agent, Task
+from crewai import Agent, Task, Crew
 from langchain.tools import tool
 from unstructured.partition.html import partition_html
 
@@ -57,8 +57,17 @@ class BrowserTools:
                     ensuring that no significant detail is left out.
                 """)
             )
+            # Execute the crew
+            crew = Crew(
+                agents=[agent],
+                tasks=[task],
+                verbose=True
+            )
             
-            summary = task.execute_sync()
+            result = crew.kickoff()
+            
+            task_output = task.output
+            summary = task_output.summary
             summaries.append(summary)
             content = "\n\n".join(summaries)
         return f'\nScrapped Content: {content}\n'

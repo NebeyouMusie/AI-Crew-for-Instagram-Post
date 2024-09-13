@@ -20,8 +20,8 @@ agents = MarketingAnalysisAgents()
 
 print("## Welcome to the marketing Crew")
 print('-------------------------------')
-product_website = input("What is the product website you want a marketing strategy for?\n")
-product_details = input("Any extra details about the product and or the instagram post you want?\n")
+product_website = str(input("What is the product website you want a marketing strategy for?\n"))
+product_details = str(input("Any extra details about the product and or the instagram post you want?\n"))
 
 
 # Create Agents
