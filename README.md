@@ -34,7 +34,7 @@
     - `source venv/bin/activate` for Mac and `venv/bin/activate` for Windows
  4. Navigate to the projects directory `cd ./AI-Crew-for-Instagram-Post` using your terminal
  5. Install Libraries: `pip install -r requirements.txt`
- 6. Enter your `GROQ_API_KEY`, `SERPER_API_KEY` and `BROWSERLESS_API_KEY` in the `example.env` file then change the file to `.env`. You can get your `GROQ_API_KEY` from [here](https://console.groq.com/keys), YOUR `SERPER_API_KEY` from [here](https://serper.dev/api-key) and your `BROWSERLESS_API_KEY` from [here](https://account.browserless.io/)
+ 6. Enter your `GROQ_API_KEY`, `SERPER_API_KEY` and `BROWSERLESS_API_KEY` in the `example.env` file then change the file to `.env`. You can get your `GROQ_API_KEY` from [here](https://console.groq.com/keys), your `SERPER_API_KEY` from [here](https://serper.dev/api-key) and your `BROWSERLESS_API_KEY` from [here](https://account.browserless.io/)
  7. run `python main.py`
 
 ## Star it
