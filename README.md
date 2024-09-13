@@ -1,4 +1,4 @@
-# AI-Crew-for-Instagram-Post
+# AI Crew for Instagram Post
 ![Instagram Post Image](./images/instagram-post.png)
 
 ## Description
