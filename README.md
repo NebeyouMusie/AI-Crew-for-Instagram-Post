@@ -1,7 +1,7 @@
 # AI Crew for Instagram Post
 ![Instagram Post Image](./images/instagram-post.png)
 
-## Descriptio
+## Description
 - This GitHub repository, "AI-Crew-for-Instagram-Post", is a project that aims to provide an AI-powered solution for creating Instagram posts.
 
 ## Libraries Used
