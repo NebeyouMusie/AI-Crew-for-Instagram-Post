@@ -22,7 +22,7 @@
 5. `lib/utils.py`: contains a function to initialize our llm.
 6. `setup/agents.py`: contains a class for setting up different agents with specific skills and a particular job to do. 
 7. `setup/tasks.py`: contains a class for setting up different tasks which are specific assignments completed by agents. 
-8. `setup/tools`: contains a folder for setting up a tool which is a skill or function that agents can utilize to perform various actions. 
+8. `setup/tools`: contains a folder for setting up a tool which is a skill or function that agents can utilize to perform various action
 
 ## Installation
  1. Prerequisites
