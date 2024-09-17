@@ -4,7 +4,7 @@
 ## Description
 - This GitHub repository, "AI-Crew-for-Instagram-Post", is a project that aims to provide an AI-powered solution for creating Instagram posts.
 
-## Libraries Used
+## Libraries Use
 - langchain
 - langchain_groq
 - langchain_community
