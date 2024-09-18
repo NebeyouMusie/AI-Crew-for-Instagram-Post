@@ -14,7 +14,7 @@
 - crewai
 - crewai[tools]
 
-## File and Folder Explanatio
+## File and Folder Explanation
 1. `lib`: contains configuration and utility code files.
 2. `setup`: contains core building blocks for our crew.
 3. `main.py`: main function that will run our crew.
