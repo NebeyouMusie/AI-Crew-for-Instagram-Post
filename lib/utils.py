@@ -17,6 +17,7 @@ def groq_llm():
     llm = ChatGroq(
         model='gemma2-9b-it',
         temperature=0.7,
-        api_key=get_groq_api_key()
+        api_key=get_groq_api_key(),
+        stop_sequences=['<|endoftext|>']
     )
     return llm
